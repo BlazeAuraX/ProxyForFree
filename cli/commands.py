@@ -31,7 +31,7 @@ class ProxyApp:
             running, pid = instance.is_running()
             if running:
                 print(f"Error: Process with PID {pid} is already running for port {port}.")
-                return
+                return False
             print("It seems to be an orphaned state. Cleaning up...")
             del state[port_str]
             self.state_manager.save_state(state)
@@ -39,7 +39,7 @@ class ProxyApp:
         running, pid = instance.is_running()
         if running:
             print(f"Error: Process with PID {pid} is already running for port {port}. Please run 'stop {port}' first.")
-            return
+            return False
 
         print(f"Starting OpenVPN for {country}/{config} on {instance.tun_interface}...")
         success, result = instance.start(country, config)
@@ -51,7 +51,7 @@ class ProxyApp:
             if Path(instance.ovpn_log_file).exists():
                 print("\nLast 20 lines of OpenVPN log:")
                 subprocess.run(["tail", "-n", "20", instance.ovpn_log_file])
-            return
+            return False
 
         tun_ip = result
         print(f"Interface {instance.tun_interface} got IP: {tun_ip}")
@@ -65,6 +65,7 @@ class ProxyApp:
         }
         self.state_manager.save_state(state)
         print(f"Proxy successfully started on port {port}")
+        return True
 
     def stop_proxy(self, port):
         """Stop a specific proxy instance."""

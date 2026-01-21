@@ -3,6 +3,7 @@ import os
 import re
 import signal
 import subprocess
+import time
 from pathlib import Path
 
 from core.config import CONFIG_DIR, OPENVPN_PASS, OPENVPN_USER
@@ -173,18 +174,47 @@ class VPNManager:
         """
         Stop OpenVPN and 3proxy processes for a specific port.
         """
+        pids_to_wait = []
         for pid_file_path in [f"/tmp/ovpn_{port}.pid", f"/tmp/3proxy_{port}.pid"]:
             pid_file = Path(pid_file_path)
             if pid_file.exists():
-                # Kills process; removes PID file on failure
                 try:
                     with pid_file.open() as f:
                         pid = int(f.read().strip())
                         os.kill(pid, signal.SIGTERM)
-                    pid_file.unlink()
+                        pids_to_wait.append((pid, pid_file))
                 except Exception:
                     if pid_file.exists():
                         pid_file.unlink()
+
+        # Wait for processes to exit
+        if pids_to_wait:
+            for _ in range(50):  # wait up to 5 seconds
+                still_running = []
+                for pid, pid_file in pids_to_wait:
+                    try:
+                        os.kill(pid, 0)
+                        still_running.append((pid, pid_file))
+                    except OSError:
+                        # Process is gone, cleanup pid file
+                        if pid_file.exists():
+                            pid_file.unlink()
+
+                if not still_running:
+                    break
+                pids_to_wait = still_running
+                time.sleep(0.1)
+            else:
+                # Force kill if still running after 5 seconds
+                for pid, pid_file in pids_to_wait:
+                    with contextlib.suppress(Exception):
+                        os.kill(pid, signal.SIGKILL)
+                    if pid_file.exists():
+                        pid_file.unlink()
+
+        # Cleanup tun interface
+        tun_interface = f"tun{port}"
+        subprocess.run(["ip", "link", "delete", tun_interface], stderr=subprocess.DEVNULL)
 
         # Also cleanup temp auth file
         auth_file = Path(f"/tmp/ovpn_auth_{port}.tmp")

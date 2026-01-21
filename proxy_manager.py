@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import argparse
-import os
 import subprocess
 import sys
 
@@ -34,10 +33,6 @@ def check_auth():
 
 def main():
     """Main entry point for the Proxy Manager CLI."""
-    if os.getuid() != 0:
-        print("This script must be run as root.")
-        sys.exit(1)
-
     check_dependencies()
     check_auth()
 
