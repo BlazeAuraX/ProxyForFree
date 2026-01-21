@@ -6,19 +6,19 @@ install:
 
 # Show status of running proxies
 status:
-	sudo uv run proxy-status
+	uv run proxy-status
 
 # Stop all proxies and clean up the system
 stop-all:
-	sudo uv run proxy-stop-all
+	uv run proxy-stop-all
 
 # View available countries
 list-countries:
-	sudo uv run proxy-list-countries
+	uv run proxy-list-countries
 
 # View configs for a country
 list-configs:
-	sudo uv run proxy-list-configs $(country)
+	uv run proxy-list-configs $(country)
 
 # Lint code using ruff
 lint:
@@ -37,10 +37,10 @@ clean:
 help:
 	@echo "Available commands:"
 	@echo "  make install         - Install dependencies via uv"
-	@echo "  make status          - Show running proxies status (requires sudo)"
-	@echo "  make stop-all        - Stop all proxies (requires sudo)"
-	@echo "  make list-countries  - Show available countries (requires sudo)"
-	@echo "  make list-configs    - Show configs for a country (e.g., make list-configs country=usa) (requires sudo)"
+	@echo "  make status          - Show running proxies status"
+	@echo "  make stop-all        - Stop all proxies"
+	@echo "  make list-countries  - Show available countries"
+	@echo "  make list-configs    - Show configs for a country (e.g., make list-configs usa)"
 	@echo "  make lint            - Check code with ruff"
 	@echo "  make format          - Format code with ruff"
 	@echo "  make clean           - Remove temporary files"
